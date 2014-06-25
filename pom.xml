@@ -11,23 +11,8 @@
   <url>https://github.com/ttk2/MusterCull</url>
   
   <build>
-    <pluginManagement>
-      <plugins>
-        <plugin>
-          <artifactId>maven-compiler-plugin</artifactId>
-          <version>2.3.2</version>
-          <configuration>
-            <source>1.6</source>
-            <target>1.6</target>
-            <compilerArgument></compilerArgument>
-          </configuration>
-        </plugin>
-      </plugins>
-    </pluginManagement>
-        
     <sourceDirectory>${basedir}/MusterCull/src</sourceDirectory>
-    
-    <resources>
+	<resources>
       <resource>
         <directory>${basedir}/MusterCull</directory>
         <includes>
@@ -42,8 +27,15 @@
       <groupId>org.bukkit</groupId>
       <artifactId>craftbukkit</artifactId>
       <version>1.7.9</version>
-      <scope>system</scope>
-      <systemPath>${project.lib}/craftbukkit.jar</systemPath>
+      <scope>provided</scope>
     </dependency>
   </dependencies>
+  
+  <repositories>
+    <repository>
+      <id>lib</id>
+      <name>lib</name>
+      <url>${project.baseUri}lib</url>
+    </repository>
+  </repositories>
 </project>
